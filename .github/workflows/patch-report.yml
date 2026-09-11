@@ -1,0 +1,38 @@
+name: Patch HYROX report
+
+on:
+  push:
+    paths:
+      - 'scripts/patch_social.py'
+      - '.github/workflows/patch-report.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build social listening module
+        run: python scripts/patch_social.py
+
+      - name: Commit updated report
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No report changes"
+            exit 0
+          fi
+          git config user.name "hyrox-report-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git commit -m "Add Mentionlytics social listening module"
+          git push
