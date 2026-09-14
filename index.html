@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HYROX Acapulco 2026 — Working Report V3</title>
+<title>HYROX Acapulco 2026 — Reporte Consolidado</title>
 <style>
 :root{--bg:#080808;--panel:#141414;--panel2:#1c1c1c;--text:#f2f2f2;--muted:#9f9f9f;--yellow:#ffe500;--line:#303030;--green:#67d98d}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
@@ -236,13 +236,109 @@ th{color:var(--yellow);font-size:10px;text-transform:uppercase;letter-spacing:.0
 .earned-thumb img{width:62px!important;height:82px!important;object-fit:cover;object-position:top;border-radius:8px;border:1px solid #333;display:block}
 @media(max-width:650px){.coverage-card img{height:360px}}
 
+
+/* Ambassadors · revisión manual completa */
+.amb2-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0 18px}
+.amb2-kpi{background:#111;border:1px solid var(--line);border-radius:14px;padding:15px}
+.amb2-kpi span{display:block;color:#858585;font-size:9px;text-transform:uppercase;letter-spacing:.08em}
+.amb2-kpi b{display:block;font-size:30px;line-height:1.05;margin:6px 0 4px;color:#fff}
+.amb2-kpi small{display:block;color:#a2a2a2;font-size:10px;line-height:1.4}
+.amb2-kpi .accent{color:var(--yellow)}
+.amb2-insights{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0 22px}
+.amb2-insight{background:linear-gradient(180deg,#151515,#0d0d0d);border:1px solid #2b2b2b;border-radius:14px;padding:16px}
+.amb2-insight h3{font-size:14px;margin:0 0 10px;color:#fff}
+.amb2-rank{display:flex;flex-direction:column;gap:7px}
+.amb2-rank-row{display:grid;grid-template-columns:24px 1fr auto;gap:9px;align-items:center;padding:8px 0;border-top:1px solid #222}
+.amb2-rank-row:first-child{border-top:0}
+.amb2-rank-row .num{font-weight:900;color:var(--yellow);font-size:11px}
+.amb2-rank-row b{font-size:11px;color:#eee}
+.amb2-rank-row span{display:block;font-size:9px;color:#7e7e7e;margin-top:2px}
+.amb2-rank-row strong{font-size:12px;color:#fff;white-space:nowrap}
+.amb2-table{min-width:1180px}
+.amb2-table th{position:sticky;top:0;background:#111;z-index:1}
+.amb2-table td{vertical-align:top}
+.amb2-status{display:inline-flex;align-items:center;border:1px solid #333;border-radius:999px;padding:4px 7px;font-size:8px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.amb2-status.active{border-color:#3c4d21;color:#d8ef98;background:rgba(201,236,85,.04)}
+.amb2-status.zero{border-color:#543232;color:#d7a3a3;background:rgba(190,80,80,.035)}
+.amb2-status.hist{border-color:#544b28;color:#e3d297;background:rgba(220,190,90,.035)}
+.amb2-best{font-size:10px;color:#d8d8d8;line-height:1.4;min-width:190px}
+.amb2-note{font-size:9px;color:#818181;line-height:1.45;max-width:310px}
+.amb2-handle{font-size:9px;color:#797979;margin-top:3px}
+.amb2-ratio{font-weight:800;color:#f1f1f1;white-space:nowrap}
+.amb2-zero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:10px}
+.amb2-zero-item{background:#0e0e0e;border:1px solid #292929;border-radius:10px;padding:10px}
+.amb2-zero-item b{display:block;font-size:10px;color:#eee}
+.amb2-zero-item span{display:block;font-size:9px;color:#777;margin-top:3px}
+.amb2-method{margin-top:14px;background:#101010;border:1px solid #2b2b2b;border-radius:12px;padding:13px;font-size:10px;color:#9b9b9b;line-height:1.55}
+.amb2-method b{color:#eee}
+@media(max-width:1000px){.amb2-kpis{grid-template-columns:repeat(2,1fr)}.amb2-insights{grid-template-columns:1fr}.amb2-zero-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.amb2-kpis,.amb2-zero-grid{grid-template-columns:1fr}}
+
+
+/* Ticketing / Entradas */
+.ticket-kpis{margin-bottom:14px}
+.ticket-kpis .kpi{min-height:128px}
+.ticket-subgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 18px}
+.ticket-mini{background:#101010;border:1px solid #2b2b2b;border-radius:12px;padding:14px}
+.ticket-mini span{display:block;color:#7f7f7f;font-size:9px;text-transform:uppercase;letter-spacing:.07em}
+.ticket-mini b{display:block;font-size:21px;margin:4px 0 2px}
+.ticket-mini small{display:block;color:#999;font-size:10px;line-height:1.45}
+.ticket-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:15px;margin-top:14px}
+.ticket-bars{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+.ticket-bar-row{display:grid;grid-template-columns:180px 1fr 86px;gap:12px;align-items:center}
+.ticket-bar-name b{display:block;font-size:12px}
+.ticket-bar-name span{display:block;color:#777;font-size:9px;margin-top:2px}
+.ticket-track{height:12px;background:#242424;border-radius:999px;overflow:hidden}
+.ticket-fill{height:100%;background:var(--yellow);border-radius:999px}
+.ticket-bar-val{text-align:right;font-size:12px;font-weight:800}
+.ticket-bar-val span{display:block;color:#777;font-size:9px;font-weight:600}
+.ticket-splits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.ticket-split{background:#0f0f0f;border:1px solid #292929;border-radius:12px;padding:14px}
+.ticket-split h3{font-size:13px;margin-bottom:9px}
+.ticket-split-row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid #242424;font-size:11px}
+.ticket-split-row:last-child{border-bottom:0}
+.ticket-split-row span{color:#aaa}.ticket-split-row b{color:#f3f3f3}
+.ticket-callout{display:flex;flex-direction:column;justify-content:center;min-height:100%}
+.ticket-big{font-size:44px;font-weight:900;line-height:1;color:var(--yellow);margin:8px 0 6px}
+.ticket-big-label{font-size:11px;color:#999}
+.ticket-checkin-stack{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.ticket-checkin-box{background:#0f0f0f;border:1px solid #292929;border-radius:10px;padding:12px}
+.ticket-checkin-box b{display:block;font-size:20px}.ticket-checkin-box span{display:block;color:#777;font-size:9px;text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+.ticket-caution{border-color:#5a4f18;background:rgba(255,229,0,.025)}
+@media(max-width:1050px){.ticket-layout{grid-template-columns:1fr}.ticket-subgrid{grid-template-columns:1fr}.ticket-bar-row{grid-template-columns:140px 1fr 70px}}
+@media(max-width:650px){.ticket-bar-row{grid-template-columns:1fr}.ticket-bar-val{text-align:left}.ticket-splits,.ticket-checkin-stack{grid-template-columns:1fr}}
+
+
+/* Email / CRM */
+.email-kpis{margin-bottom:14px}
+.email-kpis .kpi{min-height:126px}
+.email-meta{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin:14px 0}
+.email-campaign{background:linear-gradient(180deg,#151515,#0d0d0d);border:1px solid #2b2b2b;border-radius:14px;padding:16px}
+.email-campaign h3{font-size:17px;margin:2px 0 4px;color:#fff}
+.email-subject{font-size:11px;color:#cfcfcf;margin:9px 0 12px;line-height:1.45}
+.email-meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.email-chip{border:1px solid #303030;background:#0c0c0c;border-radius:999px;padding:5px 8px;color:#aaa;font-size:9px}
+.email-mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.email-mini{background:#101010;border:1px solid #2b2b2b;border-radius:12px;padding:12px}
+.email-mini span{display:block;color:#7d7d7d;font-size:8px;text-transform:uppercase;letter-spacing:.07em}
+.email-mini b{display:block;font-size:18px;color:#fff;margin:5px 0 2px}
+.email-mini small{display:block;color:#888;font-size:9px;line-height:1.35}
+.email-brand{border-color:#4f471b;background:rgba(255,229,0,.025)}
+.email-brand .brand-tag{display:inline-flex;border:1px solid #75691e;border-radius:999px;padding:4px 7px;font-size:8px;color:var(--yellow);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.email-brand h3{margin:0 0 8px}
+.email-brand p{font-size:10px;color:#aaa;line-height:1.55}
+.email-brand strong{color:#eee}
+.email-caveat{font-size:9px;color:#8c8c8c;line-height:1.5;margin-top:10px;padding-top:10px;border-top:1px solid #262626}
+@media(max-width:900px){.email-meta{grid-template-columns:1fr}.email-mini-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.email-mini-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
 <div class="layout">
 <aside>
 <div class="brand">HYROX<span>MX</span></div>
-<div class="sub">ACAPULCO 2026 · WORKING REPORT V3</div>
+<div class="sub">ACAPULCO 2026 · REPORTE CONSOLIDADO</div>
 <nav>
 <a href="#meta">01. Meta Overview</a>
 <a href="#owned">02. Owned Social</a>
@@ -253,15 +349,18 @@ th{color:var(--yellow);font-size:10px;text-transform:uppercase;letter-spacing:.0
 <a href="#gallery">07. Visual Gallery</a>
 <a href="#listening">08. Escucha Social</a>
 <a href="#ga4">09. GA4 / Web</a>
-<a href="#pending">10. Próximos módulos</a>
+<a href="#ambassadors">10. Embajadores</a>
+<a href="#tickets">11. Entradas / Ticketing</a>
+<a href="#email">12. Email / CRM</a>
+<a href="#pending">13. Próximos módulos</a>
 </nav>
 </aside>
 <main>
 <div class="hero">
 <div class="eyebrow">Digital Performance & Inteligencia de Sponsors</div>
 <h1>HYROX Acapulco 2026</h1>
-<p>Versión de trabajo con el bloque de Meta ampliado visualmente. Se incorporaron miniaturas dentro de la tabla de Top Content y una leyenda compacta de KPIs para cada pieza destacada.</p>
-<span class="pill">29 Ago – 10 Sep</span><span class="pill">Meta · First-party</span><span class="pill">52 feed posts</span><span class="pill">175 Stories</span>
+<p>Reporte consolidado de performance digital, escucha social, analítica web, ticketing, email/CRM y revisión completa del programa de embajadores HYROX México.</p>
+<span class="pill">29 Ago – 10 Sep</span><span class="pill">Meta · First-party</span><span class="pill">52 feed posts</span><span class="pill">175 Stories</span><span class="pill">Ambassadors · 50/50 revisados</span><span class="pill">Ticketing · 28.931 items emitidos</span><span class="pill">Email / CRM · 1 campaña analizada</span>
 </div>
 
 
@@ -1764,12 +1863,663 @@ It will be open to all athletes and spectators, with food, drinks, and unique ex
 </div>
 <div class="note"><b>Los usuarios de Acapulco muestran mayor intención:</b> Acapulco representa 636 usuarios activos (4,19% del total), pero registra una <b>tasa de interacción de 64,38%</b> and <b>48 s de tiempo medio de interacción</b>, ambos por encima de los promedios generales del sitio: 53,29% y 36 s.</div>
 </section>
-<section id="pending"><div class="eyebrow">10</div><h2>Próximos módulos</h2><div class="grid"><div class="card third"><h3>Ambassadors</h3><div class="placeholder">50 perfiles · cumplimiento · contenidos · rendimiento</div></div><div class="card third"><h3>Tickets / Registros</h3><div class="placeholder">Registros · ventas · rendimiento del funnel</div></div><div class="card third"><h3>Email</h3><div class="placeholder">Envíos · aperturas · clics · aporte de tráfico</div></div><div class="card full"><h3>Inteligencia de Sponsors</h3><div class="placeholder">Entregables vs. ejecutado · share of voice · contenido destacado · brand moments · activaciones · insights</div></div></div></section>
+
+<section id="ambassadors">
+<div class="eyebrow">10 · Ambassador Performance</div>
+<h2>Embajadores HYROX México</h2>
+<p class="section-intro">Revisión manual consolidada de los 50 perfiles del roster. El criterio incluye contenido de <b>HYROX / HYROX México</b> en sentido amplio —preparación, entrenamiento, competencia, recap, menciones de marca y colaboraciones— y no se limita a piezas dedicadas exclusivamente a Acapulco. Los conteos con “+” representan un <b>mínimo confirmado</b>.</p>
+
+<div class="amb2-kpis">
+  <div class="amb2-kpi"><span>Roster revisado</span><b>50 / 50</b><small>revisión manual completada</small></div>
+  <div class="amb2-kpi"><span>Con actividad HYROX</span><b class="accent">41</b><small>82% del roster con al menos una pieza detectada</small></div>
+  <div class="amb2-kpi"><span>3+ piezas confirmadas</span><b>16</b><small>perfiles con activación recurrente</small></div>
+  <div class="amb2-kpi"><span>Sin activación actual</span><b>9</b><small>18% del roster; uno con historial HYROX previo</small></div>
+</div>
+<div class="note"><b>Resultado general:</b> se detectó actividad HYROX visible en <b>41 de 50 perfiles (82%)</b>. La activación es desigual: 16 perfiles muestran 3+ piezas confirmadas, mientras que 9 no presentan activación actual en la revisión. Las métricas de publicaciones colaborativas corresponden al post compartido y <b>no deben atribuirse exclusivamente a un solo embajador</b>.</div>
+
+<div class="amb2-insights">
+  <div class="amb2-insight"><h3>Mayor impacto visible · mejor pieza</h3><div class="amb2-rank"><div class="amb2-rank-row"><div class="num">01</div><div><b>Daniel Corral Barron</b><span>@danielcorralmx</span></div><strong>23,2K likes · collab</strong></div><div class="amb2-rank-row"><div class="num">02</div><div><b>German Kiriluk</b><span>@germankirluk</span></div><strong>75,7K views · 6.445 likes · 129 comentarios</strong></div><div class="amb2-rank-row"><div class="num">03</div><div><b>Luis Carpizo</b><span>@carpizofitness</span></div><strong>5.738 likes · collab</strong></div><div class="amb2-rank-row"><div class="num">04</div><div><b>Omar Gameros</b><span>@ogameros</span></div><strong>~5.252 likes</strong></div><div class="amb2-rank-row"><div class="num">05</div><div><b>Rosy Sánchez Navarrete</b><span>@rosysancheznavarrete</span></div><strong>33,8K views · 4.484 likes · 232 comentarios</strong></div><div class="amb2-rank-row"><div class="num">06</div><div><b>Ana María de los Ríos</b><span>@anamafit</span></div><strong>23,0K views · 3.178 likes · 100 comentarios</strong></div></div></div>
+  <div class="amb2-insight"><h3>Mayor eficiencia visible · likes de mejor pieza / seguidores</h3><div class="amb2-rank"><div class="amb2-rank-row"><div class="num">01</div><div><b>Rosy Sánchez Navarrete</b><span>3,3K seguidores · mejor pieza</span></div><strong>134.5%</strong></div><div class="amb2-rank-row"><div class="num">02</div><div><b>Mario Habib Fierro Elias</b><span>6,3K seguidores · mejor pieza</span></div><strong>35.2%</strong></div><div class="amb2-rank-row"><div class="num">03</div><div><b>Blanca Mateos</b><span>4,3K seguidores · mejor pieza</span></div><strong>28.7%</strong></div><div class="amb2-rank-row"><div class="num">04</div><div><b>Omar Gameros</b><span>18,7K seguidores · mejor pieza</span></div><strong>28.1%</strong></div><div class="amb2-rank-row"><div class="num">05</div><div><b>Alejandro de la Rosa</b><span>5,8K seguidores · mejor pieza</span></div><strong>27.5%</strong></div><div class="amb2-rank-row"><div class="num">06</div><div><b>Luis Fernando Gaither Azuara</b><span>9,6K seguidores · mejor pieza</span></div><strong>20.2%</strong></div><div class="amb2-rank-row"><div class="num">07</div><div><b>Laura Saldaña</b><span>13,9K seguidores · mejor pieza</span></div><strong>12.6%</strong></div><div class="amb2-rank-row"><div class="num">08</div><div><b>Ana María de los Ríos</b><span>32,8K seguidores · mejor pieza</span></div><strong>9.7%</strong></div></div><div class="amb2-method"><b>Lectura:</b> no es un engagement rate estándar. Compara los likes visibles de la mejor pieza detectada con el tamaño actual de la cuenta. Las colaboraciones pueden distribuirse muy por encima de la base propia del embajador.</div></div>
+</div>
+
+<h3 class="subsection-title">Roster completo · 50 perfiles revisados</h3>
+<div class="card full table-scroll">
+<table class="amb2-table">
+<thead><tr><th>#</th><th>Embajador</th><th>Seguidores</th><th>Piezas HYROX</th><th>Mejor pieza visible</th><th>Likes / followers*</th><th>Estado</th><th>Lectura</th></tr></thead>
+<tbody>
+<tr>
+  <td class="rank-cell">01</td>
+  <td><b>Alan Carrillo</b><div class="amb2-handle">@alancarrilloav</div></td>
+  <td>—</td>
+  <td><b>2</b></td>
+  <td><div class="amb2-best">330 likes propia · ~4,2K likes en pieza compartida</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + compartido</div></td>
+  <td><div class="amb2-note">Participación oficial + pieza propia previa a HYROX Acapulco.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">02</td>
+  <td><b>Aldo Márquez</b><div class="amb2-handle">@marquez_aldo_athlete</div></td>
+  <td>9,5K</td>
+  <td><b>1+</b></td>
+  <td><div class="amb2-best">912 likes · 59 comentarios</div></td>
+  <td><span class="amb2-ratio">9,6%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Contenido HYROX directo previo al evento; pieza no marcada como collab en la extracción.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">03</td>
+  <td><b>Alejandro de la Rosa</b><div class="amb2-handle">@delarosa_ar</div></td>
+  <td>5,8K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">1.594 likes · reel colaborativo</div></td>
+  <td><span class="amb2-ratio">27,5%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Presencia recurrente de HYROX y cobertura de distintas competencias.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">04</td>
+  <td><b>Alondra González Meza</b><div class="amb2-handle">@alondraglez0</div></td>
+  <td>434K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">~2,0K likes · collab</div></td>
+  <td><span class="amb2-ratio">0,5%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collabs</div></td>
+  <td><div class="amb2-note">Audiencia de gran escala y varias publicaciones vinculadas a competencia.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">05</td>
+  <td><b>Amanda Monzerrath García Treviño</b><div class="amb2-handle">@coach.rusa</div></td>
+  <td>53,2K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">247 likes · collab</div></td>
+  <td><span class="amb2-ratio">0,5%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Contenido HYROX recurrente y menciones de partners.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">06</td>
+  <td><b>Ana María de los Ríos</b><div class="amb2-handle">@anamafit</div></td>
+  <td>32,8K</td>
+  <td><b>1+</b></td>
+  <td><div class="amb2-best">23,0K views · 3.178 likes · 100 comentarios</div></td>
+  <td><span class="amb2-ratio">9,7%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Collab</div></td>
+  <td><div class="amb2-note">Pieza de clasificación al Mundial con fuerte interacción.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">07</td>
+  <td><b>Ángel Quintero</b><div class="amb2-handle">@angelquinterosr</div></td>
+  <td>11,5K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">668 likes</div></td>
+  <td><span class="amb2-ratio">5,8%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Contenido de competencia y recap HYROX.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">08</td>
+  <td><b>Annie Buentello</b><div class="amb2-handle">@annie_bii</div></td>
+  <td>37,9K</td>
+  <td><b>1</b></td>
+  <td><div class="amb2-best">618 likes · collab</div></td>
+  <td><span class="amb2-ratio">1,6%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Collab</div></td>
+  <td><div class="amb2-note">Activación puntual durante el período revisado.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">09</td>
+  <td><b>Antonio González</b><div class="amb2-handle">@tony_gonzalezzz</div></td>
+  <td>150K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">—</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status zero">Sin activación</span><div class="amb2-handle">Sin activación actual</div></td>
+  <td><div class="amb2-note">No se detectaron publicaciones HYROX en la revisión manual.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">10</td>
+  <td><b>Bianca Sierra</b><div class="amb2-handle">@biancasierra3</div></td>
+  <td>95,5K</td>
+  <td><b>1</b></td>
+  <td><div class="amb2-best">1.320 likes</div></td>
+  <td><span class="amb2-ratio">1,4%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Una pieza visible de HYROX con buena tracción absoluta.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">11</td>
+  <td><b>Blanca Mateos</b><div class="amb2-handle">@blanca.athlete</div></td>
+  <td>4,3K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">1.240 likes</div></td>
+  <td><span class="amb2-ratio">28,7%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Muy alta respuesta relativa para una comunidad pequeña.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">12</td>
+  <td><b>Cesar Baeza</b><div class="amb2-handle">@baeeza_</div></td>
+  <td>70,8K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">Métrica no visible en la captura</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collabs</div></td>
+  <td><div class="amb2-note">Presencia clara y repetida de HYROX, incluyendo dobles y recap.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">13</td>
+  <td><b>Christian Scherf Islas</b><div class="amb2-handle">@chrizscherf</div></td>
+  <td>—</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">276 likes · 27 comentarios</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Contenido de Acapulco y clasificación al Mundial HYROX 2027.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">14</td>
+  <td><b>Constanza Torres Buerba</b><div class="amb2-handle">@constanzatorresb</div></td>
+  <td>21,9K</td>
+  <td><b>1+</b></td>
+  <td><div class="amb2-best">618 likes · collab</div></td>
+  <td><span class="amb2-ratio">2,8%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Collab</div></td>
+  <td><div class="amb2-note">Pieza compartida con Annie Buentello.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">15</td>
+  <td><b>Dana Morales</b><div class="amb2-handle">@danagmp</div></td>
+  <td>22,1K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">—</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status zero">Sin activación</span><div class="amb2-handle">Sin activación actual</div></td>
+  <td><div class="amb2-note">Bio vinculada a HYROX, sin publicaciones detectadas en el período.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">16</td>
+  <td><b>Daniel Azuara</b><div class="amb2-handle">@danielazzuara</div></td>
+  <td>123K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">1.600 likes · collab</div></td>
+  <td><span class="amb2-ratio">1,3%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Contenido de competencia y colaboración en Pro Dobles.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">17</td>
+  <td><b>Daniel Corral Barron</b><div class="amb2-handle">@danielcorralmx</div></td>
+  <td>1,3M</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">23,2K likes · collab</div></td>
+  <td><span class="amb2-ratio">1,8%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Mayor volumen absoluto de interacción entre los perfiles revisados.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">18</td>
+  <td><b>Daniel Perez Farias</b><div class="amb2-handle">@danielpefa</div></td>
+  <td>179K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">—</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status zero">Sin activación</span><div class="amb2-handle">Sin activación actual</div></td>
+  <td><div class="amb2-note">0 publicaciones y 0 menciones HYROX detectadas en la revisión.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">19</td>
+  <td><b>Diego Sosa</b><div class="amb2-handle">@eldocfitness</div></td>
+  <td>51,9K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">—</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status zero">Sin activación</span><div class="amb2-handle">Sin activación actual</div></td>
+  <td><div class="amb2-note">0 publicaciones y 0 menciones HYROX detectadas.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">20</td>
+  <td><b>Eduardo Bencomo</b><div class="amb2-handle">@eduardobencomo6</div></td>
+  <td>33,3K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">160,1K views · 134 likes · 4 comentarios</div></td>
+  <td><span class="amb2-ratio">0,4%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collabs</div></td>
+  <td><div class="amb2-note">Varios contenidos del viaje, competencia y recap de Acapulco.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">21</td>
+  <td><b>Fernando Osorio</b><div class="amb2-handle">@fernando_osorio</div></td>
+  <td>16,1K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">749 likes</div></td>
+  <td><span class="amb2-ratio">4,7%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Actividad recurrente de HYROX y contenido de competencia.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">22</td>
+  <td><b>German Flores Bulnes</b><div class="amb2-handle">@germanflores06</div></td>
+  <td>7,3K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">688 likes · 62 comentarios</div></td>
+  <td><span class="amb2-ratio">9,5%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Buen rendimiento relativo y recap competitivo de Acapulco.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">23</td>
+  <td><b>German Kiriluk</b><div class="amb2-handle">@germankirluk</div></td>
+  <td>106,6K</td>
+  <td><b>1+</b></td>
+  <td><div class="amb2-best">75,7K views · 6.445 likes · 129 comentarios</div></td>
+  <td><span class="amb2-ratio">6,0%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Pieza de alto rendimiento centrada en entrenamiento híbrido.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">24</td>
+  <td><b>Gloria Murillo</b><div class="amb2-handle">@gloriamurillomx</div></td>
+  <td>615K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">—</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status zero">Sin activación</span><div class="amb2-handle">Sin activación actual</div></td>
+  <td><div class="amb2-note">No se detectó actividad HYROX visible en el período.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">25</td>
+  <td><b>Guillermo Silva Rojas</b><div class="amb2-handle">@gsilvarojas · @memosilva.fit</div></td>
+  <td>41K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">195 likes</div></td>
+  <td><span class="amb2-ratio">0,5%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Actividad HYROX concentrada en la segunda cuenta; no se suman audiencias por solapamiento.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">26</td>
+  <td><b>Heliud Pulido Rodríguez</b><div class="amb2-handle">@heliudpulido</div></td>
+  <td>676K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">—</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status zero">Sin activación</span><div class="amb2-handle">Sin activación actual</div></td>
+  <td><div class="amb2-note">No se detectaron publicaciones HYROX visibles en el período.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">27</td>
+  <td><b>Jahir Ocampo</b><div class="amb2-handle">@jahir_ochampion</div></td>
+  <td>294K</td>
+  <td><b>1</b></td>
+  <td><div class="amb2-best">275 likes · collab</div></td>
+  <td><span class="amb2-ratio">0,1%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Collab</div></td>
+  <td><div class="amb2-note">Colaboración previa al evento con Lino Muñoz.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">28</td>
+  <td><b>Jesús Antonio Valdés Ascencio</b><div class="amb2-handle">@antonysky</div></td>
+  <td>7,6K</td>
+  <td><b>11+</b></td>
+  <td><div class="amb2-best">5,5K views · 491 likes · 21 comentarios</div></td>
+  <td><span class="amb2-ratio">6,4%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Uno de los perfiles con mayor volumen de publicaciones HYROX detectadas.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">29</td>
+  <td><b>Laura Saldaña</b><div class="amb2-handle">@laurasaldanat</div></td>
+  <td>13,9K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">1.751 likes · collab</div></td>
+  <td><span class="amb2-ratio">12,6%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Contenido de competencia, resultados y partner performance.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">30</td>
+  <td><b>Lino Muñoz Mandujano</b><div class="amb2-handle">@lino_789</div></td>
+  <td>106K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">1.507 likes</div></td>
+  <td><span class="amb2-ratio">1,4%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Contenido previo/alrededor de Acapulco y colaboraciones.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">31</td>
+  <td><b>Luis Carpizo</b><div class="amb2-handle">@carpizofitness</div></td>
+  <td>224K</td>
+  <td><b>1</b></td>
+  <td><div class="amb2-best">5.738 likes · collab</div></td>
+  <td><span class="amb2-ratio">2,6%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Collab</div></td>
+  <td><div class="amb2-note">Activación puntual de muy buen rendimiento absoluto.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">32</td>
+  <td><b>Luis Fernando Gaither Azuara</b><div class="amb2-handle">@luisferazuara</div></td>
+  <td>9,6K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">1.934 likes</div></td>
+  <td><span class="amb2-ratio">20,2%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Muy fuerte respuesta orgánica relativa al tamaño de audiencia.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">33</td>
+  <td><b>Male Arizmendi</b><div class="amb2-handle">@malearizmendi</div></td>
+  <td>12,3K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">321 likes</div></td>
+  <td><span class="amb2-ratio">2,6%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Contenido recurrente de HYROX y recap competitivo de Acapulco.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">34</td>
+  <td><b>Mariann Gonzalez</b><div class="amb2-handle">@marianngzz</div></td>
+  <td>27,8K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">905 likes</div></td>
+  <td><span class="amb2-ratio">3,3%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Perfil claramente alineado con HYROX y contenido de competencia.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">35</td>
+  <td><b>Mario Habib Fierro Elias</b><div class="amb2-handle">@mariohabibf</div></td>
+  <td>6,3K</td>
+  <td><b>4+</b></td>
+  <td><div class="amb2-best">~2,2K likes · collab oficial</div></td>
+  <td><span class="amb2-ratio">35,2%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Alta actividad y una de las mejores eficiencias visibles del roster.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">36</td>
+  <td><b>Marisela Cantú</b><div class="amb2-handle">@chellycantu</div></td>
+  <td>255K</td>
+  <td><b>1+</b></td>
+  <td><div class="amb2-best">Métrica no confirmada</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">HYROX general</div></td>
+  <td><div class="amb2-note">Contenido HYROX habitual, sin publicación dedicada a Acapulco detectada.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">37</td>
+  <td><b>Mauricio Ochoa</b><div class="amb2-handle">@mau.ochoalz</div></td>
+  <td>—</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">307 likes</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Contenido propio de competencia y post-evento.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">38</td>
+  <td><b>Mauricio Martínez “Pantera”</b><div class="amb2-handle">@mau_pantera_martinez</div></td>
+  <td>11,3K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">747 likes · 20 comentarios</div></td>
+  <td><span class="amb2-ratio">6,6%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Contenido específico de Acapulco y participación competitiva.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">39</td>
+  <td><b>Michel Muñoz Malagon</b><div class="amb2-handle">@michelm_oficial</div></td>
+  <td>17,9K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">537 likes</div></td>
+  <td><span class="amb2-ratio">3,0%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Presencia recurrente de HYROX y contenido de Acapulco.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">40</td>
+  <td><b>Nini Luna</b><div class="amb2-handle">@ninilunap</div></td>
+  <td>16,8K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">533 likes · collab</div></td>
+  <td><span class="amb2-ratio">3,2%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Contenido específico de Acapulco y colaboración vinculada al evento.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">41</td>
+  <td><b>Omar Gameros</b><div class="amb2-handle">@ogameros</div></td>
+  <td>18,7K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">~5.252 likes</div></td>
+  <td><span class="amb2-ratio">28,1%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Muy alto rendimiento orgánico relativo; también pieza de resultado con 1.074 likes.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">42</td>
+  <td><b>Paola Fuentes</b><div class="amb2-handle">@lacoachpaolafuentes</div></td>
+  <td>195K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">—</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status zero">Sin activación</span><div class="amb2-handle">Sin activación actual</div></td>
+  <td><div class="amb2-note">No se detectaron publicaciones HYROX visibles en el período.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">43</td>
+  <td><b>Patrick Loliger</b><div class="amb2-handle">@pato_remo</div></td>
+  <td>412K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">—</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status zero">Sin activación</span><div class="amb2-handle">Sin activación actual</div></td>
+  <td><div class="amb2-note">No se detectaron publicaciones HYROX visibles en el período.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">44</td>
+  <td><b>Paula Fossas</b><div class="amb2-handle">@paufossas</div></td>
+  <td>20,1K</td>
+  <td><b>1+</b></td>
+  <td><div class="amb2-best">328 likes</div></td>
+  <td><span class="amb2-ratio">1,6%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Contenido HYROX confirmado; presencia adicional visual en el perfil.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">45</td>
+  <td><b>Pedro Trejo</b><div class="amb2-handle">@petefit__</div></td>
+  <td>8,1K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">328 likes</div></td>
+  <td><span class="amb2-ratio">4,1%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Contenido recurrente, World Championships y otras competencias HYROX.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">46</td>
+  <td><b>Raul Victoria Bautista</b><div class="amb2-handle">@raul_victoria_</div></td>
+  <td>21,4K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">~1.430 likes</div></td>
+  <td><span class="amb2-ratio">6,7%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collabs</div></td>
+  <td><div class="amb2-note">Resultados, clasificación y publicaciones específicas de Acapulco.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">47</td>
+  <td><b>Roberta Isabel de León</b><div class="amb2-handle">@robertaisabel</div></td>
+  <td>125K</td>
+  <td><b>0</b></td>
+  <td><div class="amb2-best">Histórico: 1+ pieza HYROX</div></td>
+  <td><span class="amb2-ratio">—</span></td>
+  <td><span class="amb2-status hist">Histórico</span><div class="amb2-handle">Histórico solamente</div></td>
+  <td><div class="amb2-note">Antecedentes claros en HYROX, pero sin activación actual detectada.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">48</td>
+  <td><b>Rodrigo Morán Obregón</b><div class="amb2-handle">@rodrigomoranob</div></td>
+  <td>22,2K</td>
+  <td><b>3+</b></td>
+  <td><div class="amb2-best">~430 likes</div></td>
+  <td><span class="amb2-ratio">1,9%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico</div></td>
+  <td><div class="amb2-note">Preparación, competencia y recap/resultados de HYROX Acapulco.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">49</td>
+  <td><b>Rosy Sánchez Navarrete</b><div class="amb2-handle">@rosysancheznavarrete</div></td>
+  <td>3,3K</td>
+  <td><b>6+</b></td>
+  <td><div class="amb2-best">33,8K views · 4.484 likes · 232 comentarios</div></td>
+  <td><span class="amb2-ratio">134,5%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collabs</div></td>
+  <td><div class="amb2-note">Volumen alto de contenido y fuerte amplificación vía colaboraciones.</div></td>
+</tr>
+<tr>
+  <td class="rank-cell">50</td>
+  <td><b>Susana Arambula</b><div class="amb2-handle">@susyarambula</div></td>
+  <td>65,8K</td>
+  <td><b>2+</b></td>
+  <td><div class="amb2-best">23,0K views · 3.178 likes · 100 comentarios</div></td>
+  <td><span class="amb2-ratio">4,8%</span></td>
+  <td><span class="amb2-status active">Activo</span><div class="amb2-handle">Orgánico + collab</div></td>
+  <td><div class="amb2-note">Principal colaboración vinculada a clasificación al Mundial.</div></td>
+</tr></tbody>
+</table>
+</div>
+
+<h3 class="subsection-title">Perfiles sin activación actual detectada</h3>
+<div class="amb2-zero-grid"><div class="amb2-zero-item"><b>Antonio González</b><span>@tony_gonzalezzz · 150K seguidores</span></div><div class="amb2-zero-item"><b>Dana Morales</b><span>@danagmp · 22,1K seguidores</span></div><div class="amb2-zero-item"><b>Daniel Perez Farias</b><span>@danielpefa · 179K seguidores</span></div><div class="amb2-zero-item"><b>Diego Sosa</b><span>@eldocfitness · 51,9K seguidores</span></div><div class="amb2-zero-item"><b>Gloria Murillo</b><span>@gloriamurillomx · 615K seguidores</span></div><div class="amb2-zero-item"><b>Heliud Pulido Rodríguez</b><span>@heliudpulido · 676K seguidores</span></div><div class="amb2-zero-item"><b>Paola Fuentes</b><span>@lacoachpaolafuentes · 195K seguidores</span></div><div class="amb2-zero-item"><b>Patrick Loliger</b><span>@pato_remo · 412K seguidores</span></div><div class="amb2-zero-item"><b>Roberta Isabel de León</b><span>@robertaisabel · 125K seguidores · historial HYROX previo</span></div></div>
+
+<div class="amb2-method"><b>Metodología:</b> revisión pública manual de Instagram complementada con extracción pública de Apify cuando estuvo disponible. “Piezas HYROX” se registra por perfil; una misma colaboración puede aparecer en la ficha de dos embajadores, por lo que no se suma como pieza única en los totales del programa. “Likes / followers” usa la mejor pieza visible detectada y followers actuales; sirve como señal comparativa de eficiencia, no como engagement rate por alcance o impresiones. Cuando la métrica de una pieza no estaba visible, se dejó en blanco en lugar de estimarla.</div>
+<div class="note"><b>Seguimiento para Brand Moments:</b> los 50 perfiles quedan como universo base para una segunda auditoría por sponsor. Se revisarán producto, logos, backdrop, menciones, tags, collabs y piezas dedicadas. <b>PUMA tendrá cruce específico</b> entre embajadores HYROX, atletas PUMA y perfiles con doble rol.</div>
+</section>
+
+<section id="tickets">
+<div class="eyebrow">11 · Vivenu / Ticketing</div>
+<h2>Entradas, ventas y check-in</h2>
+<p class="section-intro">Lectura consolidada del inventario emitido para Mundo Imperial HYROX Acapulco · Season 26/27. Ventana comercial disponible: 1 Ene – 14 Sep 2026. Los datos de check-in corresponden al período 1–14 Sep y la actividad se concentra en los tres días del evento, 4–6 Sep.</p>
+
+<div class="grid ticket-kpis">
+  <div class="card kpi"><div class="label">Tickets / items emitidos</div><div class="value">28.931</div><div class="micro-note">100% emitidos online según Overview.</div></div>
+  <div class="card kpi"><div class="label">Revenue</div><div class="value">33,555,010.98</div><div class="micro-note">MXN · Revenue total reportado en Overview.</div></div>
+  <div class="card kpi"><div class="label">Web Sessions</div><div class="value">170.768</div><div class="micro-note">Sesiones reportadas por la plataforma de ticketing en la ventana completa.</div></div>
+  <div class="card kpi"><div class="label">Unique check-ins</div><div class="value">11.984</div><div class="delta">41,42% platform-reported</div></div>
+</div>
+
+<div class="ticket-subgrid">
+  <div class="ticket-mini"><span>Transaction Volume</span><b>34,255,347.59 MXN</b><small>Se mantiene separado de Revenue porque Vivenu reporta ambas métricas con definiciones distintas.</small></div>
+  <div class="ticket-mini"><span>Shopping cart · average</span><b>3.578,49 MXN</b><small>Promedio de carrito reportado por la plataforma; no equivale a precio promedio por persona.</small></div>
+  <div class="ticket-mini"><span>Últimos 31 días</span><b>12.284 tickets</b><small><b>42,5%</b> del total emitido se concentró entre 15 Ago y 14 Sep. Revenue del período: <b>2,598,691.33 MXN</b>.</small></div>
+</div>
+
+<div class="ticket-layout">
+  <div class="card">
+    <div class="label">Mix del inventario emitido</div>
+    <h3>Qué compone los 28.931 items</h3>
+    <div class="ticket-bars">
+      <div class="ticket-bar-row"><div class="ticket-bar-name"><b>Spectators</b><span>entradas de público</span></div><div class="ticket-track"><div class="ticket-fill" style="width:46%"></div></div><div class="ticket-bar-val">13.304<span>46,0%</span></div></div>
+      <div class="ticket-bar-row"><div class="ticket-bar-name"><b>Athlete entries</b><span>Singles + Doubles + Relay</span></div><div class="ticket-track"><div class="ticket-fill" style="width:37.9%"></div></div><div class="ticket-bar-val">10.966<span>37,9%</span></div></div>
+      <div class="ticket-bar-row"><div class="ticket-bar-name"><b>Sportograf</b><span>photo packages</span></div><div class="ticket-track"><div class="ticket-fill" style="width:14.9%"></div></div><div class="ticket-bar-val">4.297<span>14,9%</span></div></div>
+      <div class="ticket-bar-row"><div class="ticket-bar-name"><b>Otros</b><span>accesos / productos adicionales</span></div><div class="ticket-track"><div class="ticket-fill" style="width:1.3%"></div></div><div class="ticket-bar-val">364<span>1,3%</span></div></div>
+    </div>
+    <div class="note compact-note"><b>Lectura:</b> el inventario no representa 28.931 asistentes únicos: la plataforma incluye productos como Sportograf y otros accesos. Por eso, el mix se presenta como <b>items/tickets emitidos</b>, no como personas.</div>
+  </div>
+
+  <div class="card ticket-callout">
+    <div class="label">Concentración de demanda</div>
+    <div class="ticket-big">42,5%</div>
+    <div class="ticket-big-label">de todos los tickets/items se emitieron en los últimos 31 días observados</div>
+    <p>La curva de ventas muestra una aceleración marcada en la recta final previa al evento. Este comportamiento convierte al período de cierre en una ventana crítica para paid media, CRM y contenido de urgencia.</p>
+  </div>
+</div>
+
+<div class="ticket-splits">
+  <div class="ticket-split">
+    <h3>Athlete entries · 10.966</h3>
+    <div class="ticket-split-row"><span>Doubles</span><b>7.250 · 66,1%</b></div>
+    <div class="ticket-split-row"><span>Singles</span><b>2.992 · 27,3%</b></div>
+    <div class="ticket-split-row"><span>Relay</span><b>724 · 6,6%</b></div>
+  </div>
+  <div class="ticket-split">
+    <h3>Spectators · 13.304</h3>
+    <div class="ticket-split-row"><span>Regular spectator</span><b>9.562 · 71,9%</b></div>
+    <div class="ticket-split-row"><span>Free U12 child spectator</span><b>3.742 · 28,1%</b></div>
+  </div>
+</div>
+
+<div class="grid" style="margin-top:14px">
+  <div class="card half">
+    <div class="label">Check-in</div>
+    <h3>Asistencia registrada por la plataforma</h3>
+    <div class="ticket-checkin-stack">
+      <div class="ticket-checkin-box"><b>11.984</b><span>check-ins únicos</span></div>
+      <div class="ticket-checkin-box"><b>12.252</b><span>escaneos totales</span></div>
+      <div class="ticket-checkin-box"><b>41,42%</b><span>checked in · plataforma</span></div>
+      <div class="ticket-checkin-box"><b>268</b><span>escaneos adicionales vs. únicos</span></div>
+    </div>
+  </div>
+  <div class="card half ticket-caution">
+    <div class="label">Nota metodológica</div>
+    <h3>No interpretar 41,42% como “attendance rate” absoluto</h3>
+    <p>Vivenu reporta 41,42% como <b>Checked in</b> sobre el inventario emitido. Como ese inventario incluye photo packages y otros productos que no necesariamente representan una persona que debe escanearse en puerta, se mantiene el término <b>platform-reported check-in rate</b> y no se infiere un porcentaje de no-show.</p>
+    <p class="micro-note">Fuente: Vivenu · Overview, Analytics y Ticket Statistics. Corte de datos: 14 Sep 2026.</p>
+  </div>
+</div>
+
+<div class="note"><b>Conclusión:</b> el ticketing muestra una base relevante de público —13.304 entradas de spectator— además de 10.966 athlete entries. Dentro de la demanda de atletas, Doubles domina con 66,1% de las entradas competitivas, mientras que la venta total presenta una fuerte concentración en el tramo final previo al evento.</div>
+</section>
+
+<section id="email">
+<div class="eyebrow">12 · Brevo / Email CRM</div>
+<h2>Email Performance</h2>
+<p class="section-intro">Módulo en desarrollo. Se incorpora la primera campaña analizada del funnel de Acapulco 26/27 y se irán agregando los siguientes envíos bajo la misma estructura para comparar alcance, aperturas, clics y activaciones de sponsors.</p>
+
+<div class="email-meta">
+  <div class="email-campaign">
+    <div class="label">Campaña #88 · 20 May 2026 · 19:01</div>
+    <h3>Push Pre-Registro Acapulco 26/27</h3>
+    <div class="email-subject"><b>Subject:</b> Mundo Imperial HYROX Acapulco: acceso anticipado 🙌</div>
+    <div class="email-meta-row">
+      <span class="email-chip">From · HYROX Mexico &lt;info@hyrox.mx&gt;</span>
+      <span class="email-chip">Objetivo · Pre-registro / acceso anticipado</span>
+      <span class="email-chip">Canal owned · CRM</span>
+    </div>
+  </div>
+  <div class="card email-brand">
+    <span class="brand-tag">Brand Moment guardado</span>
+    <h3>LALA · placement dedicado</h3>
+    <p>El mailing incluye una pieza creativa específica de <strong>LALA 100</strong> con presencia conjunta HYROX y mensaje de producto —“16g proteína · 0% lactosa · impulsa tu esfuerzo”— antes del bloque general de partners.</p>
+    <p>Se registra como <strong>Owned Digital Brand Moment</strong> para retomarlo dentro del análisis específico de LALA / Sponsors.</p>
+  </div>
+</div>
+
+<div class="grid email-kpis">
+  <div class="card kpi"><div class="label">Delivered</div><div class="value">75.015</div><div class="delta">98,85% delivery rate</div></div>
+  <div class="card kpi"><div class="label">Opens</div><div class="value">28.825</div><div class="delta">38,43% open rate</div></div>
+  <div class="card kpi"><div class="label">Clicks</div><div class="value">1.453</div><div class="delta">1,94% click-through rate</div></div>
+  <div class="card kpi"><div class="label">Unsubscribes</div><div class="value">157</div><div class="micro-note">0,21% unsubscribe rate</div></div>
+</div>
+
+<div class="email-mini-grid">
+  <div class="email-mini"><span>Click-to-open rate</span><b>5,04%</b><small>Derivado: clicks ÷ opens.</small></div>
+  <div class="email-mini"><span>Brevo conversions</span><b>0</b><small>Sin conversiones registradas por Brevo; no equivale a 0 ventas.</small></div>
+  <div class="email-mini"><span>Tracking note</span><b>Automated</b><small>Brevo indica que automated opens and clicks están incluidos.</small></div>
+  <div class="email-mini"><span>Sponsor signal</span><b>LALA</b><small>Creative placement dedicado dentro del cuerpo del email.</small></div>
+</div>
+
+<div class="note"><b>Lectura inicial:</b> la campaña alcanzó una base amplia con una tasa de apertura de 38,43%. El CTR fue 1,94% y el click-to-open derivado 5,04%. A medida que se incorporen los siguientes envíos se podrá evaluar qué asuntos, momentos del funnel y placements de sponsors generaron mayor respuesta.</div>
+<div class="email-caveat">Fuente: Brevo · Campaign #88. El módulo Email permanece abierto hasta completar el resto de campañas. Las conversiones se reportan tal como aparecen en Brevo y no se utilizan todavía como atribución de ventas.</div>
+</section>
+
+<section id="pending"><div class="eyebrow">13</div><h2>Próximos módulos</h2><div class="grid"><div class="card half"><h3>Email · próximas campañas</h3><div class="placeholder">Agregar envíos y comparar apertura · clics · CTR · CTOR · bajas · sponsor placements</div></div><div class="card half"><h3>Sponsor Intelligence / Brand Moments</h3><div class="placeholder">Embajadores + atletas PUMA · contenido destacado · brand moments · entregables · owned / earned</div></div></div></section>
 
 
 
 
-<div class="footer">Reporte en desarrollo · Meta first-party + escucha social de Mentionlytics + analítica web GA4 · HYROX Acapulco 2026.</div>
+<div class="footer">Reporte en desarrollo · Meta first-party + Mentionlytics + GA4 + Vivenu ticketing + Brevo Email CRM + auditoría pública de 50 embajadores · HYROX Acapulco 2026.</div>
 </main></div>
 
 
