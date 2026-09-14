@@ -1,0 +1,38 @@
+name: Patch latest HYROX report
+
+on:
+  push:
+    paths:
+      - 'scripts/patch_latest.py'
+      - '.github/workflows/patch-latest.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply latest report patch
+        run: python scripts/patch_latest.py
+
+      - name: Commit updated report
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No report changes"
+            exit 0
+          fi
+          git config user.name "hyrox-report-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git commit -m "Update HYROX report: ambassadors, ticketing and email"
+          git push
