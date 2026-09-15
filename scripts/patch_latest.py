@@ -1,25 +1,38 @@
 from pathlib import Path
-import base64, zlib, re, html
+import re
 
-root=Path(__file__).resolve().parents[1]
-p=root/"index.html"
-text=p.read_text(encoding="utf-8")
-match=re.search(r'<section id="stories">.*?</section>',text,re.S)
+root = Path(__file__).resolve().parents[1]
+p = root / "index.html"
+text = p.read_text(encoding="utf-8")
+match = re.search(r'<section id="stories">.*?</section>', text, re.S)
 if not match:
     raise SystemExit("Stories section not found")
-old=match.group(0)
-srcs=re.findall(r'<img[^>]+src=["\']([^"\']+)["\']',old,re.S)
-if len(srcs) < 15:
-    raise SystemExit(f"Expected at least 15 story thumbnails, found {len(srcs)}")
-thumbs=srcs[-15:]
-section=zlib.decompress(base64.b64decode("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")).decode("utf-8")
-for i,src in enumerate(thumbs,1):
-    token=f'src="" data-story-img="{i:02d}"'
-    safe=html.escape(src,quote=True)
-    section=section.replace(token,f'src="{safe}" data-story-img="{i:02d}"')
-updated=text[:match.start()]+section+text[match.end():]
-if updated==text:
-    print("Top 15 Stories already current")
+section = match.group(0)
+
+sources = {
+    "01": "assets/images/image_16_e629523c1d0a.png",
+    "02": "assets/images/image_17_344dac04987d.png",
+    "03": "assets/images/image_18_3aa091a37012.png",
+    "04": "assets/images/image_19_9e6dd2a74a4a.png",
+    "05": "assets/images/image_20_1abcad3ba66d.png",
+    "06": "assets/images/image_21_0c1d7afb4e98.png",
+    "07": "assets/images/image_22_c0c2ff031ac3.png",
+    "08": "assets/images/image_23_06431af2b892.png",
+    "09": "assets/stories/story09_amazfit.jpg",
+}
+for i in range(10, 16):
+    b64 = (root / f"assets/stories/story{i:02d}.b64").read_text(encoding="utf-8").strip()
+    sources[f"{i:02d}"] = "data:image/webp;base64," + b64
+
+for sid, src in sources.items():
+    pattern = re.compile(rf'<img\s+src="[^"]*"\s+data-story-img="{sid}"')
+    section, count = pattern.subn(f'<img src="{src}" data-story-img="{sid}"', section)
+    if count != 2:
+        raise SystemExit(f"Expected 2 image occurrences for Story {sid}, found {count}")
+
+updated = text[:match.start()] + section + text[match.end():]
+if updated == text:
+    print("Story thumbnails already correct")
 else:
-    p.write_text(updated,encoding="utf-8")
-    print("Finalized Top 15 Stories in HYROX general report")
+    p.write_text(updated, encoding="utf-8")
+    print("Corrected all 15 HYROX Top Story thumbnails")
