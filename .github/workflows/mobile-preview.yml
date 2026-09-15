@@ -1,0 +1,39 @@
+name: Build mobile preview
+
+on:
+  push:
+    paths:
+      - 'scripts/make_mobile_preview.py'
+      - '.github/workflows/mobile-preview.yml'
+      - 'index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build preview
+        run: python scripts/make_mobile_preview.py
+
+      - name: Commit preview
+        run: |
+          if git diff --quiet -- mobile-preview.html; then
+            echo "No preview changes"
+            exit 0
+          fi
+          git config user.name "hyrox-report-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add mobile-preview.html
+          git commit -m "Build responsive mobile preview"
+          git push
